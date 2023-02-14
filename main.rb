@@ -51,6 +51,21 @@ def insert(root, data)
   root
 end
 
+def build_tree(array)
+  root = nil
+  array.each do |data|
+    root = insert(root, data)
+  end
+  root
+end
+
+def print_tree(root, prefix = "", is_left = true)
+  return if root.nil?
+  print_tree(root.right, "#{prefix}#{is_left ? "│ " : " "}", false)
+  puts "#{prefix}#{is_left ? "└─" : "┌─"}#{root.data}"
+  print_tree(root.left, "#{prefix}#{is_left ? " " : "│ "}", true)
+end
+
 # Code To Test the logic
 # Creating an example tree
 #                 M
@@ -58,13 +73,15 @@ end
 #               B   Q
 #              / \   \
 #             A   C   Z
-root = nil
-root = insert(root, 'M')
-root = insert(root, 'B')
-root = insert(root, 'Q')
-root = insert(root, 'Z')
-root = insert(root, 'A')
-root = insert(root, 'C')
+# root = nil
+# root = insert(root, 'M')
+# root = insert(root, 'B')
+# root = insert(root, 'Q')
+# root = insert(root, 'Z')
+# root = insert(root, 'A')
+# root = insert(root, 'C')
+
+root = build_tree(root,)
 
 # Print Nodes in Preorder.
 print "Preorder: "
