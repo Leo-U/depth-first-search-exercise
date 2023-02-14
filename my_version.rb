@@ -1,4 +1,4 @@
-# This is my first attempt to write pre-order, in-order, and post-order traversal code myself.
+# This is my attempt to write pre-order, in-order, and post-order traversal code myself.
 
 # Write the Node class
 
