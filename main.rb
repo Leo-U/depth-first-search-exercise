@@ -73,15 +73,10 @@ end
 #               B   Q
 #              / \   \
 #             A   C   Z
-# root = nil
-# root = insert(root, 'M')
-# root = insert(root, 'B')
-# root = insert(root, 'Q')
-# root = insert(root, 'Z')
-# root = insert(root, 'A')
-# root = insert(root, 'C')
 
-root = build_tree(root,)
+
+root = build_tree(['M', 'B', 'Q', 'Z', 'A', 'C'])
+print_tree(root)
 
 # Print Nodes in Preorder.
 print "Preorder: "
