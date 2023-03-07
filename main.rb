@@ -15,7 +15,7 @@ def preorder(root)
   # base condition for recursion
   # if tree/sub-tree is empty, return and exit
   return if root.nil?
-
+  
   print "#{root.data} " # Print data
   preorder(root.left) # Visit left subtree
   preorder(root.right) # Visit right subtree
